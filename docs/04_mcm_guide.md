@@ -131,7 +131,7 @@
 
 ### 论文结构
 
-详见 [模板README](../templates/README.md)
+详见 [模板README](../templates/07_README.md)
 
 ### 美赛写作特点（vs 国赛）
 

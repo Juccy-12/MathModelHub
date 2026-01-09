@@ -1,12 +1,179 @@
 # 📝 项目更新记录
 
+## 2026-01-09 更新（第七次）- 文档编号与阅读顺序 📋
+
+### ✨ 文档重命名与阅读指引
+
+**为所有文档添加编号前缀，明确阅读顺序**
+
+#### 重命名文件列表
+
+**顶层文档：**
+```
+QUICKSTART.md          → 01_01_QUICKSTART.md
+BEGINNER_ROADMAP.md    → 02_02_BEGINNER_ROADMAP.md
+ROADMAP_SUMMARY.md     → 03_03_ROADMAP_SUMMARY.md
+PROJECT_SUMMARY.md     → 09_09_PROJECT_SUMMARY.md
+ROLE_BASED_SUMMARY.md  → 10_10_ROLE_BASED_SUMMARY.md
+11_UPDATES.md           → 11_11_UPDATES.md
+```
+
+**docs/ 文档：**
+```
+mcm_guide.md           → 04_mcm_guide.md
+team_workflow.md       → 05_team_workflow.md
+algorithms_reference.md → 06_algorithms_reference.md
+```
+
+**templates/ 文档：**
+```
+README.md              → 07_README.md
+LATEX_CHEATSHEET.md    → 08_LATEX_CHEATSHEET.md
+```
+
+#### 编号规则
+
+**01-03：入门必读**
+- 01 快速开始（5分钟）
+- 02 新手路线图（核心）
+- 03 路线总结
+
+**04-06：进阶阅读**
+- 04 美赛指南
+- 05 团队协作
+- 06 算法手册
+
+**07-08：模板相关**
+- 07 模板教程
+- 08 LaTeX速查
+
+**09-11：参考文档**
+- 09 项目总结
+- 10 角色对比
+- 11 更新日志
+
+#### README.md 新增内容
+
+**添加"我应该先看哪个文件？"指引**
+
+```markdown
+👉 我应该先看哪个文件？
+
+完全新手：
+  README.md → 01_01_QUICKSTART → 02_02_BEGINNER_ROADMAP（找角色）
+
+有基础：
+  README.md → 02_02_BEGINNER_ROADMAP → 04 + 05（深入）
+
+只想用模板：
+  README.md → 07（模板教程）
+```
+
+#### 链接更新
+
+✅ 所有文档内部链接已批量更新
+✅ README.md 文档导航已重新组织
+✅ 按编号顺序展示，更清晰
+
+#### 效果
+
+**之前：**
+```
+- 文件名无序，不知道先看哪个
+- 新手容易迷茫
+```
+
+**现在：**
+```
+- 一看编号就知道阅读顺序
+- README 有明确的"我应该先看哪个？"指引
+- 按角色推荐不同路径
+```
+
+---
+
+## 2026-01-09 更新（第六次）- 统一推荐VSCode + LaTeX 🔧
+
+### ✨ LaTeX环境推荐调整
+
+**统一所有文档的LaTeX环境推荐策略**
+
+#### 调整内容
+
+**之前的混乱状态：**
+```
+- 02_BEGINNER_ROADMAP.md: VSCode为主（已更新）
+- docs/05_team_workflow.md: Overleaf为主（推荐新手）
+- 01_QUICKSTART.md: Overleaf为主
+- 各文档不一致
+```
+
+**现在的统一策略：**
+```
+✅ 所有文档统一推荐：VSCode + LaTeX本地环境
+⭕ Overleaf作为备选方案（仅供应急）
+```
+
+#### 修改的文件
+
+1. **docs/05_team_workflow.md**
+   - ✅ LaTeX环境部分完全重写
+   - ✅ VSCode本地环境作为方案1（强烈推荐）
+   - ✅ Overleaf降为方案2（备选，不推荐）
+   - ✅ 增加详细的推荐理由
+
+2. **01_QUICKSTART.md**
+   - ✅ 快速开始部分改为VSCode为主
+   - ✅ 添加完整的安装步骤（Mac/Windows）
+   - ✅ Overleaf改为备选提示
+
+3. **其他文档检查**
+   - ✅ 02_BEGINNER_ROADMAP.md（已经正确）
+   - ✅ 03_ROADMAP_SUMMARY.md（已经正确）
+   - ✅ 10_ROLE_BASED_SUMMARY.md（已经正确）
+   - ✅ templates/07_README.md（已经正确）
+
+#### 推荐VSCode的理由
+
+```
+✅ 完全离线，编译速度快
+✅ 与Git完美集成，团队协作方便
+✅ 功能强大（自动补全、实时预览）
+✅ 完全免费，无任何限制
+✅ 比赛时更稳定（不依赖网络）
+✅ 一次配置，终身受益
+```
+
+#### Overleaf的问题
+
+```
+❌ 免费版有严格限制（编译超时）
+❌ 3人协作需要付费升级
+❌ 需要稳定网络，断网无法工作
+❌ 大项目编译很慢
+❌ 比赛时网络不稳定风险高
+```
+
+#### 建议使用场景
+
+**VSCode本地环境（主推荐）：**
+- ✅ 所有正式比赛
+- ✅ 日常学习和练习
+- ✅ 团队协作开发
+
+**Overleaf在线（仅备选）：**
+- ⭕ 本地环境配置失败时临时应急
+- ⭕ 作为备份方案（但主环境仍应是本地）
+
+---
+
 ## 2026-01-09 更新（第五次）- 路线图按角色定制 ⭐⭐⭐
 
 ### ✨ 重大改进
 
 #### 按角色定制学习路径（核心更新）
 
-**重新设计 `BEGINNER_ROADMAP.md`（约800行）**
+**重新设计 `02_BEGINNER_ROADMAP.md`（约800行）**
 
 **核心变化：**
 - ✅ 不再是通用路线，而是**按三个角色分别定制**
@@ -56,7 +223,7 @@
 
 **文档结构：**
 ```
-BEGINNER_ROADMAP.md
+02_BEGINNER_ROADMAP.md
 ├── 📋 通用准备（所有人必做）
 │   ├── Git安装（必需）
 │   ├── GitHub账号（必需）
@@ -85,8 +252,8 @@ BEGINNER_ROADMAP.md
 ```
 
 **同步更新：**
-- ✅ `ROADMAP_SUMMARY.md` - 按角色总结
-- ✅ `UPDATES.md` - 本文件
+- ✅ `03_ROADMAP_SUMMARY.md` - 按角色总结
+- ✅ `11_UPDATES.md` - 本文件
 
 ### 💡 为什么要按角色定制？
 
@@ -142,7 +309,7 @@ Matplotlib + LaTeX + 算法 + ...
 
 #### 新手完整学习路线图（⭐核心新增）
 
-**新增文档：** `BEGINNER_ROADMAP.md`（约600行）
+**新增文档：** `02_BEGINNER_ROADMAP.md`（约600行）
 
 **包含内容：**
 
@@ -187,7 +354,7 @@ Matplotlib + LaTeX + 算法 + ...
 
 **更新了2个文件：**
 - ✅ 主`README.md` - 添加新手路线图突出链接
-- ✅ `UPDATES.md` - 本文件
+- ✅ `11_UPDATES.md` - 本文件
 
 ### 💡 适合人群
 
@@ -200,13 +367,13 @@ Matplotlib + LaTeX + 算法 + ...
 **学习路径：**
 ```
 完全新手：
-BEGINNER_ROADMAP.md（6周规划）
+02_BEGINNER_ROADMAP.md（6周规划）
   ↓
-QUICKSTART.md（快速上手）
+01_QUICKSTART.md（快速上手）
   ↓
-docs/mcm_guide.md（美赛指南）
+docs/04_mcm_guide.md（美赛指南）
   ↓
-docs/team_workflow.md（团队协作）
+docs/05_team_workflow.md（团队协作）
 ```
 
 ---
@@ -231,7 +398,7 @@ docs/team_workflow.md（团队协作）
 ```
 ✗ templates/QUICK_START.md（172行）
 ✗ templates/FILE_STRUCTURE.md（164行）
-  → 合并到 templates/README.md
+  → 合并到 templates/07_README.md
 
 结果：templates/下从4个MD精简到2个MD
 ```
@@ -252,8 +419,8 @@ docs/team_workflow.md（团队协作）
 
 **更新了3个文件：**
 - ✅ 主`README.md` - 更新模板文件说明
-- ✅ `QUICKSTART.md` - 更新模板使用指引
-- ✅ `UPDATES.md` - 本文件
+- ✅ `01_QUICKSTART.md` - 更新模板使用指引
+- ✅ `11_UPDATES.md` - 本文件
 
 ### 📊 精简效果
 
@@ -288,7 +455,7 @@ docs/team_workflow.md（团队协作）
 - ✅ 规范化目录结构
 
 **新增/更新文档：**
-- ✅ `templates/README.md`（精简版，约350行）
+- ✅ `templates/07_README.md`（精简版，约350行）
   - 快速开始（5分钟上手）
   - 文件结构说明
   - 完整的LaTeX和Word使用教程
@@ -297,7 +464,7 @@ docs/team_workflow.md（团队协作）
   - 常见问题解决方案
   - **已整合** QUICK_START.md 和 FILE_STRUCTURE.md 的内容
   
-- ✅ `templates/LATEX_CHEATSHEET.md`（LaTeX速查表，独立）
+- ✅ `templates/08_LATEX_CHEATSHEET.md`（LaTeX速查表，独立）
   - 文档结构命令
   - 数学公式大全
   - 图片表格插入
@@ -345,7 +512,7 @@ templates/
 
 #### 1. 团队协作完全指南（⭐核心新增）
 
-新增文档：`docs/team_workflow.md`
+新增文档：`docs/05_team_workflow.md`
 
 **包含内容：**
 - 📋 **团队角色定位**
@@ -406,7 +573,7 @@ templates/
 #### 3. 文档互联
 
 - 在 `mcm_guide.md` 中添加了团队协作指南的醒目链接
-- 在 `QUICKSTART.md` 中突出标注团队协作文档
+- 在 `01_QUICKSTART.md` 中突出标注团队协作文档
 - 所有文档都相互关联，方便查阅
 
 ### 📊 更新统计
@@ -456,7 +623,7 @@ templates/
 
 #### 新组队伍
 1. 先读 `README.md` 了解项目
-2. 再读 `QUICKSTART.md` 配置环境
+2. 再读 `01_QUICKSTART.md` 配置环境
 3. 重点读 `team_workflow.md` 明确分工
 4. 参考 `mcm_guide.md` 了解美赛
 5. 查阅 `algorithms_reference.md` 学习算法

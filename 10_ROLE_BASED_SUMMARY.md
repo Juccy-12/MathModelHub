@@ -47,8 +47,9 @@ LaTeX → 算法 → 机器学习 → ...
 | **Python** | ✅ 需要 | ✅ 必需 | ❌ **不需要** |
 | **Anaconda** | ⭕ 可选 | ✅ 推荐 | ❌ 不需要 |
 | **NumPy/Pandas** | ⭕ 基础 | ✅ 熟练 | ❌ 不需要 |
-| **LaTeX** | ❌ 不需要 | ❌ 不需要 | ✅ **必需** |
-| **Overleaf** | ❌ 不需要 | ❌ 不需要 | ✅ 推荐 |
+| **LaTeX引擎** | ❌ 不需要 | ❌ 不需要 | ✅ **必需** |
+| **VSCode LaTeX** | ❌ 不需要 | ❌ 不需要 | ✅ **推荐** |
+| **Overleaf** | ❌ 不需要 | ❌ 不需要 | ⭕ 备选 |
 
 ### 学习内容对比
 
@@ -81,7 +82,7 @@ Week 5: 团队磨合
 **写作手（4周）：**
 ```
 Week 1: Git基础 + 阅读O奖论文
-Week 2-3: LaTeX学习（Overleaf）⭐
+Week 2-3: LaTeX学习（VSCode + LaTeX Workshop）⭐
 Week 4: 英文写作 + 团队磨合
 ```
 
@@ -262,17 +263,21 @@ git config --global user.email "你的邮箱"
 git clone https://github.com/Jaxon1216/MathModelHub.git
 cd MathModelHub
 
-# 4. 注册Overleaf（不需要安装Python！）
-# 访问 https://www.overleaf.com
-# 用学校邮箱注册
+# 4. 安装LaTeX环境（不需要安装Python！）
+# Mac: brew install --cask mactex
+# Windows: 下载安装 MiKTeX (https://miktex.org)
 
-# 5. 创建项目并上传模板
-# 在Overleaf创建项目
-# 上传：templates/latex/mcmthesis/mcmthesis.cls
-# 上传：templates/latex/mcmthesis/mcmthesis-demo.tex
+# 5. 安装VSCode插件
+# 打开VSCode → Extensions → 搜索安装：LaTeX Workshop
 
-# 6. 开始学习LaTeX
-# 看B站视频：「美赛LaTeX教程」
+# 6. 打开模板开始学习
+# VSCode → File → Open Folder
+# → 打开 templates/latex/mcmthesis/
+# → 打开 mcmthesis-demo.tex
+# → Ctrl/Cmd+Alt+B 编译查看
+
+# 详细配置见 templates/07_README.md
+# 看B站视频：「VSCode LaTeX配置」或「美赛LaTeX教程」
 ```
 
 ---
@@ -303,7 +308,7 @@ cd MathModelHub
 ### 对写作手
 
 ```
-✅ LaTeX是必须的（至少Overleaf）
+✅ LaTeX是必须的（推荐VSCode，Overleaf备选）
 ✅ 摘要决定命运（占分40%）
 ✅ 论文完整比完美重要
 ✅ 不需要学Python！
@@ -316,13 +321,13 @@ cd MathModelHub
 ## 📚 详细学习路径
 
 **查看完整文档：**
-- [BEGINNER_ROADMAP.md](./BEGINNER_ROADMAP.md) - 按角色的完整学习路径
-- [ROADMAP_SUMMARY.md](./ROADMAP_SUMMARY.md) - 快速总结
+- [02_BEGINNER_ROADMAP.md](./02_BEGINNER_ROADMAP.md) - 按角色的完整学习路径
+- [03_ROADMAP_SUMMARY.md](./03_ROADMAP_SUMMARY.md) - 快速总结
 
 **按角色跳转：**
-- 👨‍🔬 [建模手完整路线](./BEGINNER_ROADMAP.md#建模手学习路线)
-- 💻 [编程手完整路线](./BEGINNER_ROADMAP.md#编程手学习路线)
-- ✍️ [写作手完整路线](./BEGINNER_ROADMAP.md#写作手学习路线)
+- 👨‍🔬 [建模手完整路线](./02_BEGINNER_ROADMAP.md#建模手学习路线)
+- 💻 [编程手完整路线](./02_BEGINNER_ROADMAP.md#编程手学习路线)
+- ✍️ [写作手完整路线](./02_BEGINNER_ROADMAP.md#写作手学习路线)
 
 ---
 

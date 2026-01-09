@@ -176,8 +176,8 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 **必读文档：**
 ```
 1. README.md（了解项目）
-2. docs/mcm_guide.md（美赛评审机制）
-3. docs/algorithms_reference.md（算法手册）⭐
+2. docs/04_mcm_guide.md（美赛评审机制）
+3. docs/06_algorithms_reference.md（算法手册）⭐
 4. past_problems/README.md（历年题型分析）
 ```
 
@@ -200,7 +200,7 @@ python topsis_example.py
 **必学模型（出现率>80%）：**
 ```
 1. AHP（层次分析法）⭐⭐⭐
-   - 原理：docs/algorithms_reference.md
+   - 原理：docs/06_algorithms_reference.md
    - 代码：algorithms/evaluation.py
    - 示例：notebooks/examples/ahp_example.py
    
@@ -629,35 +629,70 @@ Day 5: 最终检查，确保无误
 
 **⚠️ 重要：写作手不需要安装Python！**
 
-#### LaTeX环境（二选一）：
+#### LaTeX环境配置：
 
-**方案1：Overleaf在线（强烈推荐）⭐**
+**✅ 推荐方案：VSCode + LaTeX本地环境 ⭐⭐⭐**
+
+**为什么强烈推荐本地环境？**
 ```
-优点：
-✅ 无需安装配置
-✅ 自动保存
-✅ 实时预览
-✅ 团队协作
+✅ 功能强大（自动补全、实时预览）
+✅ 完全离线，编译速度快
+✅ 与Git完美集成，团队协作方便
+✅ 完全免费，无任何限制
+✅ 一次配置，终身受益
+✅ 比赛时更稳定（不依赖网络）
+```
 
-步骤：
+**安装步骤（Mac）：**
+```bash
+# 1. 安装MacTeX（约4GB，需要20-30分钟）
+brew install --cask mactex
+
+# 2. 验证安装
+pdflatex --version
+
+# 3. 安装VSCode插件
+# 打开VSCode → Extensions → 搜索：LaTeX Workshop
+```
+
+**安装步骤（Windows）：**
+```
+1. 下载MiKTeX：https://miktex.org/download
+2. 安装（选择"Install missing packages on-the-fly: Yes"）
+3. 验证：打开CMD，输入 pdflatex --version
+4. VSCode安装LaTeX Workshop插件
+```
+
+**详细配置说明：** 见 `templates/07_README.md`
+
+---
+
+**🔄 备选方案：Overleaf在线（不推荐，仅作备份）**
+
+**仅适合以下情况：**
+```
+⭕ 本地环境配置失败，临时应急
+⭕ 作为备份方案（主方案还是用本地）
+```
+
+**为什么不推荐 Overleaf？**
+```
+❌ 免费版有严格限制（编译超时）
+❌ 3人协作需要付费升级
+❌ 需要稳定网络，断网无法工作
+❌ 大项目编译很慢
+❌ 比赛时网络不稳定风险高
+```
+
+**如果实在需要用：**
+```
 1. 访问 https://www.overleaf.com
-2. 注册账号（用学校邮箱）
-3. 创建项目
-4. 上传模板开始写作
-
-不需要任何本地安装！
+2. 用学校邮箱注册
+3. 创建项目，上传模板
+4. 建议：仅作为备份，主环境用VSCode本地
 ```
 
-**方案2：本地VSCode（适合熟手）**
-```
-Mac: brew install --cask mactex
-Windows: 下载 MiKTeX
-
-需要配置VSCode LaTeX Workshop插件
-详见：templates/README.md
-```
-
-**推荐：新手直接用Overleaf！**
+**⚠️ 重要提醒：强烈建议提前配置好VSCode本地环境，比赛时更稳定！**
 
 #### VSCode插件（写作手）：
 ```
@@ -680,9 +715,9 @@ Windows: 下载 MiKTeX
 **必读文档：**
 ```
 1. README.md
-2. docs/mcm_guide.md（美赛评审机制）⭐
-3. templates/README.md（LaTeX教程）⭐
-4. templates/LATEX_CHEATSHEET.md（命令速查）
+2. docs/04_mcm_guide.md（美赛评审机制）⭐
+3. templates/07_README.md（LaTeX教程）⭐
+4. templates/08_LATEX_CHEATSHEET.md（命令速查）
 ```
 
 **阅读O奖论文：**
@@ -712,30 +747,39 @@ Windows: 下载 MiKTeX
 
 **Day 1：看视频教程**
 ```
-B站搜索：「美赛LaTeX教程」
+B站搜索：「美赛LaTeX教程」或「VSCode LaTeX配置」
 推荐关键词：
-- Overleaf使用教程
+- VSCode LaTeX Workshop教程
 - mcmthesis模板教程
 - 美赛论文写作
+- LaTeX Workshop使用
 
 看2-3个视频（每个20-30分钟）
 ```
 
-**Day 2-3：注册Overleaf实践**
+**Day 2-3：配置VSCode LaTeX环境**
 ```
-1. 注册 https://www.overleaf.com
+1. 安装LaTeX引擎
+   Mac: brew install --cask mactex
+   Windows: 下载安装 MiKTeX (https://miktex.org)
 
-2. 创建新项目
+2. 安装VSCode插件
+   打开VSCode → Extensions → 搜索安装：
+   ✓ LaTeX Workshop
 
-3. 上传本项目模板：
-   点击「Upload」
-   上传这2个文件：
-   ✓ templates/latex/mcmthesis/mcmthesis.cls
-   ✓ templates/latex/mcmthesis/mcmthesis-demo.tex
+3. 打开本项目模板
+   VSCode → File → Open Folder
+   → 打开 templates/latex/mcmthesis/
+   → 打开 mcmthesis-demo.tex
 
-4. 点击「Recompile」查看效果
+4. 编译预览
+   → Ctrl+Alt+B (Windows) 或 Cmd+Option+B (Mac)
+   → 或点击右上角绿色播放按钮
+   → 查看生成的PDF
 
 5. 修改demo文件练习
+
+💡 详细配置见：templates/07_README.md
 ```
 
 **Day 4-6：练习常用命令**
@@ -789,15 +833,23 @@ See Equation \ref{eq:mass}.
 目标：熟悉基本操作，不追求完美
 ```
 
-**Day 7：团队协作练习**
+**Day 7：团队协作练习（Git）**
 ```
-Overleaf支持多人协作：
-1. 点击右上角「Share」
-2. 输入队友邮箱邀请
-3. 实时协作编辑
+使用Git进行LaTeX团队协作：
+1. 建立Git仓库协作
+2. 每人负责不同section文件
+3. 练习提交、合并
 
-⚠️ 免费版只能邀请1人
-3人协作需要教育邮箱或付费升级
+工作流：
+git pull                    # 开始前拉取
+# 编辑 sections/model.tex
+git add sections/model.tex
+git commit -m "完成模型推导"
+git push
+
+备选：Overleaf在线协作
+- 优点：实时协作
+- 缺点：免费版只能邀请1人，3人需升级
 ```
 
 ---
@@ -897,8 +949,8 @@ Keywords: [3-5个关键词]
 
 **3. Grammarly（语法检查）**
 ```
-安装浏览器插件
-在Overleaf中自动检查语法
+安装VSCode插件或浏览器插件
+实时检查语法错误
 免费版够用
 ```
 
@@ -1000,7 +1052,7 @@ git push
 
 **检查清单：**
 ```
-□ Overleaf账号可用
+□ VSCode + LaTeX环境配置完成
 □ LaTeX基本操作熟练
 □ 摘要写作模板背熟
 □ 翻译工具准备好（DeepL、ChatGPT）
@@ -1008,6 +1060,7 @@ git push
 □ Git操作熟练
 □ 打印LaTeX速查表
 □ 打印摘要模板
+□ (可选) Overleaf账号作为备选
 ```
 
 **准备资料：**
@@ -1236,9 +1289,10 @@ competitions/2026/
 **工具环境：**
 ```
 □ Git安装并配置
-□ Overleaf账号可用
+□ VSCode + LaTeX环境配置完成
 □ 翻译工具准备好
 □ 流程图工具熟悉
+□ (可选) Overleaf账号作为备选
 ```
 
 **技能掌握：**
@@ -1278,7 +1332,7 @@ cd MathModelHub
 # Step 4: 根据你的角色
 # 建模手：安装Python，pip install -r requirements.txt
 # 编程手：安装Anaconda，pip install -r requirements.txt
-# 写作手：注册Overleaf，上传LaTeX模板
+# 写作手：配置VSCode + LaTeX环境（见templates/07_README.md）
 ```
 
 ### 本周任务（按角色）
@@ -1301,7 +1355,7 @@ cd MathModelHub
 
 **写作手：**
 ```
-- 注册Overleaf
+- 配置VSCode + LaTeX环境
 - 开始学习Git
 - 阅读O奖论文
 - 看LaTeX视频教程
@@ -1338,18 +1392,19 @@ cd MathModelHub
 ## 📚 相关资源
 
 ### 项目内资源
-- **通用指南**：README.md, QUICKSTART.md
-- **美赛指南**：docs/mcm_guide.md
-- **团队协作**：docs/team_workflow.md（含5天时间轴）
-- **算法手册**：docs/algorithms_reference.md
-- **LaTeX教程**：templates/README.md
-- **LaTeX速查**：templates/LATEX_CHEATSHEET.md
+- **通用指南**：README.md, 01_QUICKSTART.md
+- **美赛指南**：docs/04_mcm_guide.md
+- **团队协作**：docs/05_team_workflow.md（含5天时间轴）
+- **算法手册**：docs/06_algorithms_reference.md
+- **LaTeX教程**：templates/07_README.md
+- **LaTeX速查**：templates/08_LATEX_CHEATSHEET.md
 
 ### 外部资源
 - **Git教程**：https://notes.jiangxu.net/Misc/tools/git.html
 - **Python教程**：B站搜索「Python零基础」
-- **LaTeX教程**：B站搜索「美赛LaTeX」
-- **Overleaf**：https://www.overleaf.com
+- **LaTeX教程**：B站搜索「美赛LaTeX」或「VSCode LaTeX Workshop」
+- **VSCode LaTeX配置**：见 templates/07_README.md
+- **Overleaf（备选）**：https://www.overleaf.com
 
 ---
 

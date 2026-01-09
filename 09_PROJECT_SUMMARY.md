@@ -13,15 +13,15 @@
 - ✓ setup.py - 包安装配置
 - ✓ .gitignore - Git忽略规则
 - ✓ LICENSE - MIT许可证
-- ✓ QUICKSTART.md - 快速开始指南
+- ✓ 01_QUICKSTART.md - 快速开始指南
 
 ### 📚 文档系统
-- ✓ docs/mcm_guide.md - 美赛完整参赛指南
-- ✓ docs/team_workflow.md - 团队协作完全指南（⭐新增）
-- ✓ docs/algorithms_reference.md - 算法使用参考手册
+- ✓ docs/04_mcm_guide.md - 美赛完整参赛指南
+- ✓ docs/05_team_workflow.md - 团队协作完全指南（⭐新增）
+- ✓ docs/06_algorithms_reference.md - 算法使用参考手册
 - ✓ past_problems/README.md - 历年真题分析
 - ✓ datasets/README.md - 数据集说明
-- ✓ templates/README.md - 论文模板说明
+- ✓ templates/07_README.md - 论文模板说明
 - ✓ competitions/README.md - 比赛工作区指南
 - ✓ notebooks/README.md - Jupyter使用指南
 - ✓ references/README.md - 参考资料库
@@ -70,10 +70,10 @@
 ### 立即可做
 1. 安装依赖: `pip install -r requirements.txt`
 2. 测试示例: `python algorithms/evaluation.py`
-3. 阅读文档: 从`QUICKSTART.md`开始
+3. 阅读文档: 从`01_QUICKSTART.md`开始
 
 ### 赛前准备（1个月）
-1. 学习算法：完成`docs/algorithms_reference.md`中的示例
+1. 学习算法：完成`docs/06_algorithms_reference.md`中的示例
 2. 阅读真题：研究`past_problems/`中的历年题目
 3. 准备模板：熟悉`templates/`中的论文模板
 4. 积累代码：在`notebooks/`中创建自己的代码库
@@ -81,12 +81,12 @@
 ### 比赛期间
 1. 在`competitions/2026/`中组织工作
 2. 使用`algorithms/`和`data_analysis/`中的工具
-3. 参考`docs/mcm_guide.md`中的时间安排
+3. 参考`docs/04_mcm_guide.md`中的时间安排
 
 ## 💡 使用建议
 
 ### 新手入门
-- 从QUICKSTART.md开始
+- 从01_QUICKSTART.md开始
 - 运行示例代码
 - 阅读算法参考手册
 
@@ -103,9 +103,9 @@
 ## 📞 资源链接
 
 - MCM/ICM官网: http://www.comap.com/undergraduate/contests/mcm
-- 算法手册: docs/algorithms_reference.md
-- 完整指南: docs/mcm_guide.md
-- 快速开始: QUICKSTART.md
+- 算法手册: docs/06_algorithms_reference.md
+- 完整指南: docs/04_mcm_guide.md
+- 快速开始: 01_QUICKSTART.md
 
 ---
 

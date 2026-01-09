@@ -36,8 +36,8 @@ templates/
 
 **更新了3个文件：**
 - ✅ `README.md` - 更新模板文件结构说明
-- ✅ `QUICKSTART.md` - 更新模板使用指引
-- ✅ `UPDATES.md` - 记录本次更新
+- ✅ `01_QUICKSTART.md` - 更新模板使用指引
+- ✅ `11_UPDATES.md` - 记录本次更新
 
 ## 📊 精简效果对比
 
@@ -96,7 +96,7 @@ templates/
 
 ### 新手使用
 ```
-1. 阅读 templates/README.md（一站式教程）
+1. 阅读 templates/07_README.md（一站式教程）
 2. 需要查LaTeX命令时看 LATEX_CHEATSHEET.md
 3. 不用担心找不到内容，全在README里
 ```

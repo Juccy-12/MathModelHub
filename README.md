@@ -22,8 +22,8 @@ MathModelHub/
 ├── templates/                    # 论文模板
 │   ├── latex/mcmthesis/          # LaTeX模板（mcmthesis文档类）
 │   ├── word/                     # Word模板（含摘要页）
-│   ├── README.md                 # 一站式教程（含快速开始）⭐
-│   └── LATEX_CHEATSHEET.md       # LaTeX命令速查表
+│   ├── 07_README.md              # 一站式教程（含快速开始）⭐
+│   └── 08_LATEX_CHEATSHEET.md    # LaTeX命令速查表
 │
 ├── past_problems/                # 历年真题及优秀论文
 │   ├── 2024/
@@ -45,9 +45,9 @@ MathModelHub/
 │   └── tutorials/                # 学习教程
 │
 └── docs/                         # 项目文档
-    ├── mcm_guide.md              # 美赛完整指南
-    ├── team_workflow.md          # 团队协作指南（详细分工）
-    └── algorithms_reference.md   # 算法使用手册
+    ├── 04_mcm_guide.md           # 美赛完整指南
+    ├── 05_team_workflow.md       # 团队协作指南（详细分工）
+    └── 06_algorithms_reference.md # 算法使用手册
 ```
 
 ## 🎯 美赛快速指南
@@ -163,7 +163,7 @@ MathModelHub/
 
 ## 🚀 快速开始
 
-> 🆕 **完全新手？** 查看 **[新手完整路线图](./BEGINNER_ROADMAP.md)** 获取从零开始的学习路径！
+> 🆕 **完全新手？** 查看 **[新手完整路线图](./02_02_BEGINNER_ROADMAP.md)** 获取从零开始的学习路径！
 
 ### 环境配置
 
@@ -195,28 +195,66 @@ from algorithms.statistics import ARIMAModel
 from data_analysis.visualization import plot_heatmap
 ```
 
-## 📖 文档导航
+## 📖 文档导航与阅读顺序
 
-### 🎯 新手必读
-- **[🆕 新手完整路线图](./BEGINNER_ROADMAP.md)** - 从零开始到参加美赛（含时间表）⭐
-- **[快速开始指南](./QUICKSTART.md)** - 环境配置、快速上手
-- **[美赛完整指南](./docs/mcm_guide.md)** - 评审机制、选题策略、论文写作
-- **[团队协作指南](./docs/team_workflow.md)** - 详细分工、工具配置、协作流程
+### 👉 我应该先看哪个文件？
 
-### 🔧 技术文档
-- **[算法使用手册](./docs/algorithms_reference.md)** - 美赛高频算法详解
+**完全新手（从零开始）：**
+```
+README.md（你在这里）
+  ↓
+01_QUICKSTART.md（5分钟快速了解）
+  ↓
+02_BEGINNER_ROADMAP.md（找到你的角色，按路线学习）⭐⭐⭐
+```
+
+**有基础的参赛者：**
+```
+README.md
+  ↓
+02_BEGINNER_ROADMAP.md（检查缺漏，按角色补充）
+  ↓
+docs/04_mcm_guide.md + docs/05_team_workflow.md（深入了解）
+```
+
+**只想用模板：**
+```
+README.md
+  ↓
+templates/07_README.md（LaTeX/Word模板完整教程）
+```
+
+---
+
+### 📚 按编号阅读（推荐顺序）
+
+**入门必读：**
+- **[01 快速开始指南](./01_QUICKSTART.md)** - 5分钟快速上手⭐
+- **[02 新手完整路线图](./02_BEGINNER_ROADMAP.md)** - 按角色定制的学习路径（核心文档）⭐⭐⭐
+- **[03 学习路线总结](./03_ROADMAP_SUMMARY.md)** - 快速查看学习计划
+
+**进阶阅读：**
+- **[04 美赛完整指南](./docs/04_mcm_guide.md)** - 评审机制、选题策略、论文写作
+- **[05 团队协作指南](./docs/05_team_workflow.md)** - 详细分工、工具配置、协作流程（含5天时间轴）
+- **[06 算法使用手册](./docs/06_algorithms_reference.md)** - 美赛高频算法详解
+
+**模板相关：**
+- **[07 论文模板教程](./templates/07_README.md)** - LaTeX/Word完整教程⭐
+- **[08 LaTeX速查表](./templates/08_LATEX_CHEATSHEET.md)** - 常用命令快速查询
+
+**参考文档：**
+- **[09 项目总结](./09_PROJECT_SUMMARY.md)** - 项目创建说明
+- **[10 角色对比总结](./10_ROLE_BASED_SUMMARY.md)** - 三个角色详细对比
+- **[11 更新日志](./11_UPDATES.md)** - 项目更新记录
+
+---
+
+### 📦 其他资源
 - **[历年真题分析](./past_problems/README.md)** - 2016-2024题目统计
-- **[论文模板教程](./templates/README.md)** - LaTeX/Word完整教程⭐
-- **[LaTeX速查表](./templates/LATEX_CHEATSHEET.md)** - 常用命令快速查询
-
-### 📦 资源库
 - **[数据集说明](./datasets/README.md)** - 常用数据来源
 - **[参考资料库](./references/README.md)** - 论文、教程、书籍推荐
 - **[Jupyter示例](./notebooks/README.md)** - 算法实例和教程
-
-### 🏆 比赛相关
 - **[比赛工作区](./competitions/README.md)** - 比赛期间文件组织
-- **[项目总结](./PROJECT_SUMMARY.md)** - 项目创建说明
 
 ## 📚 外部资源
 

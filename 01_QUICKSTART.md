@@ -25,16 +25,33 @@ python -c "import numpy, pandas, matplotlib; print('环境配置成功！')"
 
 ### 使用论文模板
 
-**快速开始：查看 [`templates/README.md`](./templates/README.md)**
+**快速开始：查看 [`templates/07_README.md`](./templates/07_README.md)**
 
-#### LaTeX + Overleaf（推荐）⭐
+#### LaTeX + VSCode（强烈推荐）⭐⭐⭐
 
+**Mac安装：**
+```bash
+# 1. 安装LaTeX（约4GB，需20-30分钟）
+brew install --cask mactex
+
+# 2. VSCode安装插件：LaTeX Workshop
 ```
-1. 访问 https://www.overleaf.com 注册
-2. 创建新项目
-3. 上传 templates/latex/mcmthesis/mcmthesis.cls
-4. 参考 mcmthesis-demo.tex 开始写作
+
+**Windows安装：**
 ```
+1. 下载 MiKTeX: https://miktex.org/download
+2. 安装（选择"Install missing packages on-the-fly: Yes"）
+3. VSCode安装插件：LaTeX Workshop
+```
+
+**使用：**
+```
+1. 打开 templates/latex/mcmthesis/mcmthesis-demo.tex
+2. Ctrl/Cmd + Alt + B: 编译
+3. Ctrl/Cmd + Alt + V: 预览PDF
+```
+
+**备选：** Overleaf在线（https://www.overleaf.com）
 
 #### Word模板
 
@@ -43,8 +60,8 @@ python -c "import numpy, pandas, matplotlib; print('环境配置成功！')"
 填写摘要页，开始写作
 ```
 
-**详细教程**：`templates/README.md`（含快速开始、VSCode配置、常见问题等）  
-**命令速查**：`templates/LATEX_CHEATSHEET.md`
+**详细教程**：`templates/07_README.md`（含完整配置、使用技巧、常见问题等）  
+**命令速查**：`templates/08_LATEX_CHEATSHEET.md`
 
 ### 使用评价模型
 
@@ -95,7 +112,7 @@ plot_sensitivity_analysis(params, results,
 
 ### 赛前准备清单
 
-- [ ] 熟悉常用算法（见 `docs/algorithms_reference.md`）
+- [ ] 熟悉常用算法（见 `docs/06_algorithms_reference.md`）
 - [ ] 准备代码模板（在 `notebooks/examples/` 中创建）
 - [ ] 测试LaTeX环境（准备好论文模板）
 - [ ] 阅读O奖论文（`past_problems/` 目录）
@@ -128,17 +145,17 @@ plot_sensitivity_analysis(params, results,
 ### 快速提升（赛前1周）
 
 1. 完成 `notebooks/examples/` 中的所有示例
-2. 阅读 `docs/mcm_guide.md` 完整指南
-3. 熟悉 `docs/algorithms_reference.md` 算法手册
+2. 阅读 `docs/04_mcm_guide.md` 完整指南
+3. 熟悉 `docs/06_algorithms_reference.md` 算法手册
 4. 准备个人代码模板库
 
 ## 💡 常用资源快速链接
 
 | 资源 | 位置 | 说明 |
 |------|------|------|
-| 完整指南 | `docs/mcm_guide.md` | 评审机制、选题策略等 |
-| **团队协作** | **`docs/team_workflow.md`** | **详细分工、工具配置、协作流程** ⭐ |
-| 算法手册 | `docs/algorithms_reference.md` | 算法使用参考 |
+| 完整指南 | `docs/04_mcm_guide.md` | 评审机制、选题策略等 |
+| **团队协作** | **`docs/05_team_workflow.md`** | **详细分工、工具配置、协作流程** ⭐ |
+| 算法手册 | `docs/06_algorithms_reference.md` | 算法使用参考 |
 | 历年真题 | `past_problems/README.md` | 题目分析和统计 |
 | 论文模板 | `templates/` | LaTeX和Word模板 |
 | 代码示例 | `notebooks/examples/` | Jupyter示例 |

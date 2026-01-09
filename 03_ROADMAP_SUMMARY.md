@@ -4,9 +4,9 @@
 
 | 角色 | 主要职责 | 需要安装 | 查看详细 |
 |------|---------|---------|---------|
-| **👨‍🔬 建模手** | 模型设计、推导 | Git + Python | [详细路线](./BEGINNER_ROADMAP.md#建模手学习路线) |
-| **💻 编程手** | 代码实现、求解 | Git + Python + 完整环境 | [详细路线](./BEGINNER_ROADMAP.md#编程手学习路线) |
-| **✍️ 写作手** | 论文撰写、排版 | Git + LaTeX（**不需要Python**） | [详细路线](./BEGINNER_ROADMAP.md#写作手学习路线) |
+| **👨‍🔬 建模手** | 模型设计、推导 | Git + Python | [详细路线](./02_BEGINNER_ROADMAP.md#建模手学习路线) |
+| **💻 编程手** | 代码实现、求解 | Git + Python + 完整环境 | [详细路线](./02_BEGINNER_ROADMAP.md#编程手学习路线) |
+| **✍️ 写作手** | 论文撰写、排版 | Git + LaTeX（**不需要Python**） | [详细路线](./02_BEGINNER_ROADMAP.md#写作手学习路线) |
 
 ---
 
@@ -49,14 +49,14 @@ Week 6:   团队磨合、模拟比赛
 
 ```
 Week 1:   Git基础 + 阅读O奖论文
-Week 2-3: LaTeX学习（Overleaf）⭐
+Week 2-3: LaTeX学习（VSCode + LaTeX Workshop）⭐
 Week 4:   英文写作 + 翻译工具
 Week 5:   流程图绘制 + Git协作
 Week 6:   团队磨合、模拟比赛
 ```
 
 **重点：**
-- ✅ LaTeX基本操作（Overleaf推荐）
+- ✅ LaTeX基本操作（VSCode推荐，Overleaf备选）
 - ✅ 摘要写作模板背熟（决定命运）
 - ✅ **不需要安装Python**
 
@@ -85,7 +85,7 @@ Day 6-7: 资料准备
 |------|---------------------|
 | 建模手 | AHP + TOPSIS |
 | 编程手 | NumPy + Pandas |
-| 写作手 | LaTeX + Overleaf |
+| 写作手 | VSCode + LaTeX配置 |
 
 ---
 
@@ -133,7 +133,7 @@ Day 6-7: 资料准备
 
 **⭐⭐⭐ 必须掌握：**
 1. Git基础操作
-2. LaTeX基本操作（Overleaf）
+2. LaTeX基本操作（VSCode + LaTeX Workshop）
 3. 摘要写作模板
 4. 翻译工具使用
 
@@ -143,7 +143,7 @@ Day 6-7: 资料准备
 3. 英文润色技巧
 
 **⭐ 可选：**
-1. 本地LaTeX环境
+1. Overleaf在线环境（作为备选）
 2. 高级排版技巧
 
 ---
@@ -164,8 +164,9 @@ Day 6-7: 资料准备
 |------|-------|-------|-------|
 | **Python** | ✅ 需要 | ✅ 需要 | ❌ **不需要** |
 | **Anaconda** | ⭕ 可选 | ✅ 推荐 | ❌ 不需要 |
-| **LaTeX** | ❌ 不需要 | ❌ 不需要 | ✅ **必需** |
-| **Overleaf** | ❌ 不需要 | ❌ 不需要 | ✅ **推荐** |
+| **LaTeX引擎** | ❌ 不需要 | ❌ 不需要 | ✅ **必需** |
+| **VSCode LaTeX** | ❌ 不需要 | ❌ 不需要 | ✅ **推荐** |
+| **Overleaf** | ❌ 不需要 | ❌ 不需要 | ⭕ 备选 |
 
 ---
 
@@ -217,16 +218,21 @@ pip install -r requirements.txt
 
 **✍️ 写作手：**
 ```
-# 注册Overleaf
-访问 https://www.overleaf.com
-用学校邮箱注册
+# 安装LaTeX环境
+Mac: brew install --cask mactex
+Windows: 下载安装 MiKTeX (https://miktex.org)
 
-# 上传模板
-创建项目 → Upload：
-  ✓ templates/latex/mcmthesis/mcmthesis.cls
-  ✓ templates/latex/mcmthesis/mcmthesis-demo.tex
+# 安装VSCode插件
+打开VSCode → Extensions → 搜索安装：LaTeX Workshop
+
+# 打开模板
+VSCode → File → Open Folder
+→ 打开 templates/latex/mcmthesis/
+→ 打开 mcmthesis-demo.tex
+→ Ctrl/Cmd+Alt+B 编译查看
 
 # 不需要安装Python！
+# 详细配置见 templates/07_README.md
 ```
 
 ---
@@ -238,51 +244,51 @@ pip install -r requirements.txt
 **完全新手：**
 ```
 1. 本文（5分钟了解全局）
-2. BEGINNER_ROADMAP.md → 找到你的角色部分
+2. 02_BEGINNER_ROADMAP.md → 找到你的角色部分
 3. 按角色的学习路径开始学习
 ```
 
 **有基础：**
 ```
-1. QUICKSTART.md（快速上手）
-2. docs/team_workflow.md（团队协作）
+1. 01_QUICKSTART.md（快速上手）
+2. docs/05_team_workflow.md（团队协作）
 ```
 
 ### 按角色
 
 **👨‍🔬 建模手：**
 ```
-BEGINNER_ROADMAP.md（建模手部分）
+02_BEGINNER_ROADMAP.md（建模手部分）
   ↓
-docs/algorithms_reference.md（算法手册）
+docs/06_algorithms_reference.md（算法手册）
   ↓
 past_problems/README.md（历年题型）
   ↓
-docs/team_workflow.md（协作流程）
+docs/05_team_workflow.md（协作流程）
 ```
 
 **💻 编程手：**
 ```
-BEGINNER_ROADMAP.md（编程手部分）
+02_BEGINNER_ROADMAP.md（编程手部分）
   ↓
 notebooks/examples/（运行示例）
   ↓
 data_analysis/（查看工具）
   ↓
-docs/team_workflow.md（协作流程）
+docs/05_team_workflow.md（协作流程）
 ```
 
 **✍️ 写作手：**
 ```
-BEGINNER_ROADMAP.md（写作手部分）
+02_BEGINNER_ROADMAP.md（写作手部分）
   ↓
-templates/README.md（LaTeX教程）
+templates/07_README.md（LaTeX教程）
   ↓
-templates/LATEX_CHEATSHEET.md（速查表）
+templates/08_LATEX_CHEATSHEET.md（速查表）
   ↓
-docs/mcm_guide.md（论文写作技巧）
+docs/04_mcm_guide.md（论文写作技巧）
   ↓
-docs/team_workflow.md（协作流程）
+docs/05_team_workflow.md（协作流程）
 ```
 
 ---
@@ -417,14 +423,15 @@ git push        # 及时推送
 
 ```
 □ Git安装并配置
-□ Overleaf账号可用
-□ LaTeX基本操作
+□ VSCode + LaTeX环境配置完成
+□ LaTeX基本操作熟练
 □ 摘要模板背熟
 □ 翻译工具准备好
+□ (可选) Overleaf账号作为备选
 ```
 
 ---
 
-**📚 详细内容查看：[BEGINNER_ROADMAP.md](./BEGINNER_ROADMAP.md)**
+**📚 详细内容查看：[02_BEGINNER_ROADMAP.md](./02_BEGINNER_ROADMAP.md)**
 
 **🚀 立即开始：根据你的角色，查看对应章节！**

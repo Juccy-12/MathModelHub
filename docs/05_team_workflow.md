@@ -201,8 +201,8 @@ git pull origin main         # 获取最新代码
 
 ##### LaTeX环境配置
 
-> 📚 **详细教程**：查看 `templates/README.md` 获取完整的LaTeX配置和使用教程  
-> 📋 **速查表**：查看 `templates/LATEX_CHEATSHEET.md` 快速查找LaTeX命令
+> 📚 **详细教程**：查看 `templates/07_README.md` 获取完整的LaTeX配置和使用教程  
+> 📋 **速查表**：查看 `templates/08_LATEX_CHEATSHEET.md` 快速查找LaTeX命令
 
 ```bash
 # 方案1：在线编辑器（推荐新手）⭐
@@ -213,7 +213,7 @@ git pull origin main         # 获取最新代码
 # 方案2：本地环境（推荐熟手）
 - MacTeX（Mac）/ MiKTeX（Windows）
 - VSCode + LaTeX Workshop插件
-  详细配置见 templates/README.md
+  详细配置见 templates/07_README.md
 ```
 
 ##### VSCode LaTeX配置
@@ -392,30 +392,53 @@ pip install numpy pandas matplotlib seaborn scikit-learn scipy statsmodels jupyt
 
 #### LaTeX环境（两种方案）
 
-**方案1：Overleaf在线（推荐新手）**
+**方案1：VSCode本地环境（强烈推荐）⭐⭐⭐**
+
+**为什么推荐本地环境？**
 ```
-1. 注册 https://overleaf.com
-2. 创建新项目
-3. 上传MCM模板
-4. 邀请队友协作
-5. 实时编辑，自动编译
+✅ 完全离线，编译速度快
+✅ 与Git完美集成，协作方便
+✅ 功能强大（自动补全、实时预览）
+✅ 完全免费，无任何限制
+✅ 比赛时更稳定（不依赖网络）
 ```
 
-**方案2：本地VSCode（推荐熟手）**
+**安装步骤：**
 ```bash
-# Mac安装
+# Mac安装（约4GB，需20-30分钟）
 brew install --cask mactex
 # 或下载 http://www.tug.org/mactex/
 
 # Windows安装
 # 下载 MiKTeX: https://miktex.org/download
+# 安装时选择"Install missing packages on-the-fly: Yes"
 
 # VSCode配置
-安装插件：LaTeX Workshop
+1. 安装插件：LaTeX Workshop
+2. 编译快捷键：
+   - Ctrl/Cmd + Alt + B: 编译
+   - Ctrl/Cmd + Alt + V: 预览PDF
+```
 
-# 编译快捷键
-Ctrl/Cmd + Alt + B: 编译
-Ctrl/Cmd + Alt + V: 预览PDF
+**详细配置：** 见 `templates/07_README.md`
+
+---
+
+**方案2：Overleaf在线（备选，不推荐）**
+
+**⚠️ 不推荐原因：**
+```
+❌ 免费版有严格限制（编译超时）
+❌ 3人协作需要付费升级
+❌ 需要稳定网络，断网无法工作
+❌ 大项目编译很慢
+```
+
+**如果实在需要用：**
+```
+1. 注册 https://overleaf.com（用学校邮箱）
+2. 创建新项目，上传MCM模板
+3. 建议：仅作为备份，主环境用VSCode本地
 ```
 
 #### 翻译工具配置
@@ -433,7 +456,7 @@ Ctrl/Cmd + Alt + V: 预览PDF
 
 3. Grammarly浏览器插件
    - 安装后自动检查语法
-   - 在Overleaf中也能用
+   - 在VSCode和Overleaf中都能用
 ```
 
 ---
@@ -455,7 +478,7 @@ Ctrl/Cmd + Alt + V: 预览PDF
 2. 选择候选模型（2-3个）
    ├─ 查阅O奖论文：past_problems/下找类似题目
    ├─ AI辅助：问ChatGPT "C题 预测趋势 最佳模型"
-   └─ 参考本项目：docs/algorithms_reference.md
+   └─ 参考本项目：docs/06_algorithms_reference.md
 
 3. 快速验证可行性
    ├─ 用SPSSPRO跑小样本数据
