@@ -88,3 +88,10 @@ competitions/**/cache/
 Thumbs.db
 .DS_Store
 
+# 临时文档和草稿
+LaTeX_编译指南.md
+CURSOR_快捷键.md
+compile.sh
+draft.tex
+draft.pdf
+
