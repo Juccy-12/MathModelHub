@@ -18,10 +18,30 @@ pip install -e .
 ### 2. 验证安装
 
 ```bash
-python -c "import numpy, pandas, matplotlib; print('环境配置成功！')"
+python -c "import numpy, pandas, matplotlib, sklearn; print('环境配置成功！')"
 ```
 
 ## 📚 快速使用
+
+### 使用Jupyter Notebook可视化
+
+本项目提供预制的可视化Notebook，可直接运行：
+
+```bash
+# 启动Jupyter
+jupyter notebook
+
+# 打开 data_analysis/visualization/ 目录下的notebook
+# 例如：01_直方图_分布分析.ipynb
+```
+
+**可用的可视化Notebook：**
+- `01_直方图_分布分析.ipynb` - 数据分布分析
+- `02_箱线图_异常值检测.ipynb` - 异常值检测
+- `03_折线图_趋势分析.ipynb` - 时间序列趋势
+- `04_热力图_相关性矩阵.ipynb` - 相关性分析
+- `05_柱状图_分组对比.ipynb` - 分组对比
+- `06_散点图_预测评估.ipynb` - 预测效果评估
 
 ### 使用论文模板
 
@@ -63,57 +83,25 @@ brew install --cask mactex
 **详细教程**：`templates/07_README.md`（含完整配置、使用技巧、常见问题等）  
 **命令速查**：`templates/08_LATEX_CHEATSHEET.md`
 
-### 使用评价模型
+### 查看完整建模案例
 
-```python
-# 导入AHP模型
-from algorithms.evaluation import AHP
-import numpy as np
+`data_analysis/preprocessing/2025C示例/` 目录包含完整的美赛C题建模分析案例：
 
-# 创建判断矩阵
-ahp = AHP()
-matrix = np.array([
-    [1,   3,   5],
-    [1/3, 1,   2],
-    [1/5, 1/2, 1]
-])
-
-# 计算权重
-weights = ahp.calculate_weights(matrix)
-cr = ahp.consistency_ratio(matrix)
-
-print(f"权重: {weights}")
-print(f"一致性检验CR: {cr:.4f} {'✓通过' if cr < 0.1 else '✗未通过'}")
 ```
-
-### 使用可视化工具
-
-```python
-from data_analysis.visualization.plots import *
-import numpy as np
-
-# 设置美赛风格
-set_mcm_style()
-
-# 绘制时间序列
-x = np.arange(0, 10, 0.5)
-y = np.sin(x)
-plot_time_series(x, y, title="示例图表", xlabel="时间", ylabel="数值")
-
-# 绘制灵敏度分析（美赛必备！）
-params = np.linspace(0, 1, 20)
-results = params**2 * 100
-plot_sensitivity_analysis(params, results, 
-                         parameter_name="参数α",
-                         result_name="模型输出")
+2025C示例/
+├── problem.md              # 题目说明
+├── 数据预处理.ipynb         # 数据清洗和处理
+├── 模型分析/
+│   └── 建模分析.ipynb      # 完整建模过程
+└── *.csv                   # 原始数据和处理结果
 ```
 
 ## 🎯 参加美赛准备
 
 ### 赛前准备清单
 
-- [ ] 熟悉常用算法（见 `docs/06_algorithms_reference.md`）
-- [ ] 准备代码模板（在 `notebooks/examples/` 中创建）
+- [ ] 熟悉常用算法（见 `algorithms/algorithms_reference.md`）
+- [ ] 运行可视化Notebook，熟悉图表制作
 - [ ] 测试LaTeX环境（准备好论文模板）
 - [ ] 阅读O奖论文（`past_problems/` 目录）
 - [ ] 准备翻译工具（DeepL、ChatGPT等）
@@ -144,51 +132,58 @@ plot_sensitivity_analysis(params, results,
 
 ### 快速提升（赛前1周）
 
-1. 完成 `notebooks/examples/` 中的所有示例
-2. 阅读 `docs/04_mcm_guide.md` 完整指南
-3. 熟悉 `docs/06_algorithms_reference.md` 算法手册
-4. 准备个人代码模板库
+1. 运行 `data_analysis/visualization/` 中的所有Notebook
+2. 学习 `data_analysis/preprocessing/2025C示例/` 的建模流程
+3. 阅读 `docs/mcm_guide.md` 完整指南
+4. 熟悉 `algorithms/algorithms_reference.md` 算法手册
 
 ## 💡 常用资源快速链接
 
 | 资源 | 位置 | 说明 |
 |------|------|------|
-| 完整指南 | `docs/04_mcm_guide.md` | 评审机制、选题策略等 |
-| **团队协作** | **`docs/05_team_workflow.md`** | **详细分工、工具配置、协作流程** ⭐ |
-| 算法手册 | `docs/06_algorithms_reference.md` | 算法使用参考 |
-| 历年真题 | `past_problems/README.md` | 题目分析和统计 |
+| 完整指南 | `docs/mcm_guide.md` | 评审机制、选题策略等 |
+| **团队协作** | **`docs/team_workflow.md`** | **详细分工、工具配置、协作流程** ⭐ |
+| 算法手册 | `algorithms/algorithms_reference.md` | 算法使用参考 |
+| 历年真题 | `past_problems/README.md` | 论文和统计 |
 | 论文模板 | `templates/` | LaTeX和Word模板 |
-| 代码示例 | `notebooks/examples/` | Jupyter示例 |
+| 可视化示例 | `data_analysis/visualization/` | Jupyter Notebook |
 
 ## 🔧 常见问题
 
-### Q: 如何测试代码？
+### Q: 如何测试环境？
 
 ```bash
 # 进入项目目录
 cd MathModelHub
 
-# 运行示例
-python algorithms/evaluation.py
-python data_analysis/visualization/plots.py
+# 测试核心库
+python -c "
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+print('所有核心库导入成功！')
+"
 ```
 
-### Q: 如何导入自己的算法？
+### Q: 如何运行可视化示例？
 
-在对应的目录下创建`.py`文件，然后导入：
+```bash
+# 启动Jupyter
+jupyter notebook
 
-```python
-from algorithms.optimization.my_algorithm import MyAlgorithm
+# 在浏览器中打开 data_analysis/visualization/ 目录
+# 选择任意 .ipynb 文件运行
 ```
 
 ### Q: 如何准备数据集？
 
-将数据放入 `datasets/` 对应的子目录，并在README中记录来源。
+将数据放入 `competitions/2026/data/` 目录，参考 `data_analysis/preprocessing/` 中的预处理Notebook。
 
 ## 🎓 学习建议
 
 1. **不要贪多**：重点掌握5-6个高频算法
-2. **多做笔记**：在 `notebooks/` 中记录学习心得
+2. **多跑Notebook**：在 `data_analysis/` 中练习数据分析
 3. **看O奖论文**：学习摘要写法和图表设计
 4. **练习英文**：提前准备常用表达和模板句
 5. **团队协作**：提前分工，明确各自任务
@@ -196,10 +191,9 @@ from algorithms.optimization.my_algorithm import MyAlgorithm
 ## 📞 获取帮助
 
 - 查看文档：`docs/` 目录
-- 运行示例：`notebooks/examples/` 目录
+- 运行示例：`data_analysis/` 目录
 - 参考历年题：`past_problems/` 目录
 
 ---
 
 **祝比赛顺利，取得好成绩！🏆**
-
