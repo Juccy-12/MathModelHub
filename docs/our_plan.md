@@ -1,12 +1,12 @@
+# 以coder为核心的数模竞赛工作流
 
-
-## everyone
+## Everyone
 1. [视频第7:00到第17:00](https://www.bilibili.com/video/BV14M4m1y77t?vd_source=2bd263d156b5aefbc227d1e67f86fcf4)
     - 所有模型都要懂，至少知道每个模型是干嘛的，有什么用，
     - 两倍速看完视频，然后去[https://www.spsspro.com/](https://www.spsspro.com/)练练
 2. 遇到问题问**chatgpt**或者求助队友
-
-
+3. 如果觉得自己学的不到位，一定要主动去找资料学习。
+---
 ## Person1
 1. [latex在线编辑简易版-overleaf](https://www.bilibili.com/video/BV1gv421k7FF?p=3&vd_source=2bd263d156b5aefbc227d1e67f86fcf4)
     - 语法啥的你肯定要看的懂，基于优秀论文和网上的建议，二改现有模版
@@ -35,15 +35,24 @@
 | **英文写作**          | - 学术英语表达<br> - 避免中式英语<br> - 使用连接词和过渡句                   |
 | **图表绘制**          | - 流程图、框架图（非数据图）<br> - 模型示意图<br> - 逻辑关系图                |
 | **翻译技巧**          | - 使用翻译工具<br> - 润色和校对<br> - 专业术语准确性                        |
-
+### 应当拥有的经验
+- 独特的tex模版
+- 积累了一些专业的英文论文写作套话和表达
+- 能够流畅的插入调整图片，想改动哪里的文字知道改tex文件的哪个位置
+- 辅助person2画图
+---
 ## Person2
 1. [理清楚哪些情况需要自己找数据？：https://www.bilibili.com/video/BV1ee411q73g/](https://www.bilibili.com/video/BV1ee411q73g/)
     - 先把这个视频看完，然后心里要清楚什么情况下找数据，甚至是编数据，看完也要测试下面的网址能不能用哈
     - 这个部分也挺重要的，这里不仅影响我们的计算，也影响论文引用部分。
     - 我们是C题，很多情况是需要找数据的，比如题目没给数据只给了背景；题目只给了部分数据；题目明确要求自己去找；
 
-2. 辅助Person1画图，同样学习上面的**绘图专题**。
-3. 
+2. 与Person1画图模块相同，同样学习上面的**绘图专题**。你是画图**主力**。
+### 应当拥有的经验
+- 能够快速复刻往年赛题流程图
+- 能够导出清晰的svg图片格式，知道比赛时如何通过git交付队友
+- 知道如何导出参考文献为美赛专用引用格式
+- 清楚题目是否需要找数据
 ---
 
 #### 数据查找资源：
@@ -57,15 +66,21 @@
 - Kaggle 数据集: [https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)
 - 天池数据集: [https://tianchi.aliyun.com/dataset/](https://tianchi.aliyun.com/dataset/)
 ---
-## coder
-- 兼顾建模编程，结果可视化，
-
-
-
-
+## Coder
+- 各种各样的语言基础和开发工具的使用经验
+- 兼顾建模编程，结果可视化，会调用一下可视化库和代码
+- 快速上手各种模型，了解各种模型指标
+- Person1,2学的都要会一点
+- 熟悉此项目
+- git基础扎实能够帮助队友熟练使用git进行协作
+### 可视化工具
+- [https://www.spsspro.com/](https://www.spsspro.com/)
+- [https://matplotlib.org](https://matplotlib.org/stable/gallery/lines_bars_and_markers/index.html)
+- [https://seaborn.pydata.org/index.html](https://seaborn.pydata.org/index.html)
+---
 ## 计划
 - 在这里假设每个人已经把要学的已经学完
----
+
 
 | 日期   |       内容    |
 | ------ | ------------ |
@@ -74,9 +89,48 @@
 | 25号-27 |   模拟复现**24年C题**  |
 
 
+---
 ## 比赛流程
 
 
+```mermaid
+gantt
+    title 美赛四天核心作战流程（以Coder为驱动核心）
+    dateFormat HH:mm
+    axisFormat %H:%M
+    
+    section 第一天 开局与定向
+    独立审题与初步调研 :d1_1, 07:00, 2.5h
+    第一次团队会议（确认选题C题） :d1_2, after d1_1, 1.5h
+    Coder：第一问建模与数据清单 :d1_3, after d1_2, 3h
+    Person2：启动数据收集 :d1_4, after d1_2, 4h
+    Person1：撰写问题重述/引言 :d1_5, after d1_2, 3h
+    第二次同步会议（检查方向） :d1_6, after d1_3 d1_4 d1_5, 1h
+    
+    section 第二天 核心攻坚与产出
+    Coder：核心模型求解/产出初步结果 :d2_1, 08:00, 6h
+    Person1：撰写模型建立/结果分析初稿 :d2_2, after d2_1, 5h
+    Person2：数据深化/绘制初步图表 :d2_3, 08:00, 5h
+    关键产出：第一版基础图表生成 :milestone1, after d2_1, 0h
+    关键产出：论文核心中文初稿完成 :milestone2, after d2_2, 0h
+    
+    section 第三天 完善分析与整合
+    Coder：模型优化/敏感性分析/最终图表数据 :d3_1, 08:00, 5h
+    Person1&2：论文整合/图表精修/翻译启动 :d3_2, 08:00, 7h
+    关键节点：中文稿完成，开始翻译 :milestone3, after d3_2, 0h
+    关键节点：所有最终图表定稿 :milestone4, after d3_1, 0h
+    三人共同撰写摘要初稿（中文） :d3_3, 20:00, 2h
+    
+    section 第四天 终稿打磨与提交
+    全文翻译与排版完成 :d4_1, 08:00, 3h
+    三人交叉最终评审（重点：摘要/结果/引用） :d4_2, after d4_1, 2h
+    根据评审修改，最终定稿 :d4_3, after d4_2, 1.5h
+    提交前最终检查（文件/格式） :d4_4, after d4_3, 0.5h
+    提交论文 :milestone5, after d4_4, 0h
+```
+
+
+---
 
 ## **美赛C题核心算法模型分类表**
 
@@ -102,41 +156,3 @@
 | | **方差/协方差分析** | ★★★☆☆ | 判断不同类别或因素对观测结果的影响是否具有统计显著性。 |
 | **模拟与其他** | **蒙特卡洛模拟** | ★★★★☆ | 风险评估、复杂系统模拟（如排队、库存）、积分计算。 |
 | | **元胞自动机** | ★★★☆☆ | 模拟复杂系统的时空演化过程，如疾病传播、谣言扩散、交通流。 |
-
----
-
-```mermaid
-gantt
-    title 美赛四天核心作战流程（以Coder为驱动核心）
-    dateFormat HH:mm
-    axisFormat %H:%M
-    
-    section 第一天 (1.24) 开局与定向
-    独立审题与初步调研 :d1_1, 07:00, 2.5h
-    第一次团队会议（确认选题C题） :d1_2, after d1_1, 1.5h
-    Coder：第一问建模与数据清单 :d1_3, after d1_2, 3h
-    Person2：启动数据收集 :d1_4, after d1_2, 4h
-    Person1：撰写问题重述/引言 :d1_5, after d1_2, 3h
-    第二次同步会议（检查方向） :d1_6, after d1_3 d1_4 d1_5, 1h
-    
-    section 第二天 (1.25) 核心攻坚与产出
-    Coder：核心模型求解/产出初步结果 :d2_1, 08:00, 6h
-    Person1：撰写模型建立/结果分析初稿 :d2_2, after d2_1, 5h
-    Person2：数据深化/辅助绘制初步图表 :d2_3, 08:00, 5h
-    关键产出：第一版基础图表生成 :milestone1, after d2_1, 0h
-    关键产出：论文核心中文初稿完成 :milestone2, after d2_2, 0h
-    
-    section 第三天 (1.26) 完善分析与整合
-    Coder：模型优化/敏感性分析/最终图表数据 :d3_1, 08:00, 5h
-    Person1&2：论文整合/图表精修/翻译启动 :d3_2, 08:00, 7h
-    关键节点：中文稿完成，开始翻译 :milestone3, after d3_2, 0h
-    关键节点：所有最终图表定稿 :milestone4, after d3_1, 0h
-    三人共同撰写摘要初稿（中文） :d3_3, 20:00, 2h
-    
-    section 第四天 (1.27) 终稿打磨与提交
-    全文翻译与排版完成 :d4_1, 08:00, 3h
-    三人交叉最终评审（重点：摘要/结果/引用） :d4_2, after d4_1, 2h
-    根据评审修改，最终定稿 :d4_3, after d4_2, 1.5h
-    提交前最终检查（文件/格式） :d4_4, after d4_3, 0.5h
-    提交论文 :milestone5, after d4_4, 0h
-```
